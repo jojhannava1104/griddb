@@ -1,0 +1,205 @@
+package proyectotablap;
+
+import java.util.Scanner;
+
+
+public class ProyectoTablaP {
+
+   
+    public static void main(String[] args) {
+        
+        
+        
+        
+        
+        
+    }
+    
+    public static int menudopciones() {
+        
+        Scanner lectura = new Scanner(System.in);
+        
+        System.out.println("\\nTabla Periodica:");
+        System.out.println("1. Ver la Tabla Periodica");
+        System.out.println("2. Realizar reaccion quimica");
+        System.out.println("3. Salir");
+        
+        try {
+            
+            return lectura.nextInt();
+  
+        } catch (Exception e) {
+            
+            System.out.println("La entrada no es valida reintente");
+            lectura.nextLine();
+            return -1;
+            
+            
+            
+        }
+ 
+        
+    }
+    
+    public static boolean Seleccionopcion(int opcion) {
+        
+        switch (opcion) {
+            
+            case 1:
+                mostrarTablaperiodica();
+                break;
+            
+            case 2:
+                hacerReaccion();
+                break;
+                
+            case 3:
+                return false;
+            default:
+                System.out.println("Opcion no valida");
+    
+    }
+        
+     return true;   
+        
+    }
+    
+    
+    
+    
+    
+    
+     private static final String[][] Tablaperiodica =  {
+         
+         {"Hidrogeno", "H", "1.008", "No metal", "-1", "1"},				
+         {"Helio", "He", "4.003", "Gas noble", "0"},					
+         {"Litio",	"Li",	"6.941",	"Metal Alcalinos",	"1"},					
+         {"Berilio",	"Be",	"9.012",	"Alcalinoterreos",	"2"},					
+         {"Boro",	"B",	"10.81",	"Metaloides",	"3"},					
+         {"Carbono",	"C",	"12.01",	"No metal",	"-4",	"2",	"4"},			
+         {"Nitrogeno", "N", "14.01",	"No metal",	"-3", "1",	"2", "3", "4", "5"},
+         {"Oxigeno",	"O",	"16.00",	"No metal",	"-2"},					
+         {"Fluor",	"F",	"19.00",	"Halogeno",	"-1"},					
+         {"Neon", 	"Ne",	"20.18",	"Gas noble",	"0"},					
+         {"Sodio",	"Na",	"22.99",	"Metal Alcalinos",	"1"},					
+         {"Magnesio",	"Mg",	"24.31",	"Alcalinoterreos",	"2"},					
+         {"Aluminio",	"Al",	"26.98",	"Otros metales",	"3"},					
+         {"Silicio",	"Si",	"28.09",	"Metaloides",	"4"},					
+         {"Fosforo",	"P",	"30.97",	"No metal",	"-3",	"3",	"5"},			
+         {"Azufre",	"S",	"32,07",	"No metal",	"-2", "2", "4", "6"},		
+         {"Cloro", "Cl", "35.45",	"Halogeno",	"-1", "1", "3",	"5", "7"},	
+         {"Argon",	"Ar",	"39.95",	"Gas noble",	"0"},					
+         {"Potasio",	"K",	"39.10",	"Metal Alcalinos",	"1"},					
+         {"Calcio",	"Ca",	"40.08",	"Alcalinoterreos",	"2"},					
+         {"Escandio",	"Se",	"44.96",	"Metal de Transicion",	"3"},					
+         {"Titanio",	"Ti",	"47.87",	"Metal de Transicion",	"3",	"4"},
+         {"Vanadio", "V", "50.94", "Metal de Transicion", "2".	"3",	"4", "5"},	
+         {"Cromo",	"Cr",	"52.00",	"Metal de Transicion",	"2",	"3",	"6"},			
+         {"Manganeso",	"Mn",	"54.94",	"Metal de Transicion",	"2",	"3",	"4",	"6",	"7"},	
+         {"Hierro",	"Fe",	"55.85",	"Metal de Transicion",	"2",	"3"}				
+         {"Cobalto",	"Co",	"58.93",	"Metal de Transicion",	"2",	"3"				
+         {"Niquel",	"Ni",	"58.69",	"Metal de Transicion",	"2",	"3"},				
+         {"Cobre",	"Cu",	"63.55",	"Metal de Transicion",	"1",	"2"},				
+         {"Zinc",	"Zn",	"65.41",	"Metal de Transicion",	"2"},					
+         {"Galio",	"Ga",	"69.72",	"Otros metales",	"3"},					
+         {"Germanio",	"Ge",	"72.64",	"Metaloides",	"2",	"4"},				
+         {"Arsenico",	"As",	"74.92",	"Metaloides",	"-3",	"3",	"5"},			
+         {"Selenio",	"Se",	"78.96",	"No metal",	"-2",	"2",	"4",	"6"},		
+         {"Bromo",	"Br",	"79.90",	"Halogeno"	"-1",	"1",	"3",	"5",	"7"},	
+         {"Kripton",	"Kr",	"83.80",	"Gas noble",	"0"},					
+         {"Rubidio",	"Rb",	"85.47",	"Metal Alcalinos",	"1"},					
+         {"Estroncio",	"Sr",	"87.62",	"Alcalinoterreos",	"2"},					
+         {"Itrio",	"Y",	"88.91",	"Metal de Transicion",	"3"},					
+         {"Circonio",	"Zr",	"91.22",	"Metal de Transicion",	"4"},					
+         {"Niobio",	"Nb",	"92.91",	"Metal de Transicion",	"2",	"3",	"5"},			
+         {"Molibdeno",	"Mo",	"95.94",	"Metal de Transicion",	"2",	"3",	"4",	"5",	"6"},	
+         {"Tecnecio",	"Tc",	"98",	"Metal de Transicion",	"4",	"7"},				
+         {"Rutenio",	"Ru",	"101.1",	"Metal de Transicion",	"2",	"3",	"4",	"6",	"8"},	
+         {"Rodio",	"Rh",	"102.9",	"Metal de Transicion",	"3"},					
+         {"Paladio",	"Pd",	"106.4",	"Metal de Transicion",	"2",	"4"},				
+         {"Plata",	"Ag",	"107.9",	"Metal de Transicion",	"1"},					
+         {"Cadmio",	"Cd",	"112.4",	"Metal de Transicion",	"2"},					
+         {"Indio",	"In",	"114.8",	"Otros metales",	"3"},					
+         {"Estaño",	"Sn",	"118.7",	"Otros metales",	"2",	"4"},				
+         {"Antimonio",	"Sb",	"121.8",	"Metaloides",	"-3",	"3",	"5"},			
+         {"Telurio",	"Te",	"127.6",	"Metaloides",	"-2",	"2",	"4",	"6"},		
+         {"Yodo",	"I",	"126.9",	"Halogeno",	"-1",	"1",	"3",	"5",	"7"},	
+         {"Xenon",	"Xe",	"131.3",	"Gas noble",	"0"},					
+         {"Cesio",	"Cs",	"132.9",	"Metal Alcalinos"	"1"},					
+         {"Bario",	"Ba",	"137.3",	"Alcalinoterreos",	"2"},					
+         {"Lantano",	"La",	"138.9",	"Lantanidos",	"3"},					
+         {"Cerio",	"Ce",	"140.1",	"Lantanidos",	"3",	"4"},				
+         {"Praseodimio",	"Pr",	"140.9",	"Lantanidos",	"3"},					
+         {"Neodimio",	"Nd",	"144.2",	"Lantanidos",	"3"},					
+         {"Prometio",	"Pm",	"145",	"Lantanidos",	"3"},					
+         {"Samario",	"Sm",	"150.4",	"Lantanidos",	"3"},					
+         {"Europio",	"Eu",	"152.0",	"Lantanidos",	"2",	"3"},				
+         {"Gadolinio",	"Gd",	"157.3",	"Lantanidos",	"3"},					
+         {"Terbio",	"Tb",	"158.9",	"Lantanidos",	"3"},					
+         {"Disprosio",	"Dy",	"162.5",	"Lantanidos",	"3"},					
+         {"Holmio",	"Ho",	"164.9",	"Lantanidos",	"3"},					
+         {"Erbio",	"Er",	"167.3",	"Lantanidos",	"3"},					
+         {"Tulio",	"Tm",	"168.9",	"Lantanidos",	"3"},					
+         {"Iterbio",	"Yb",	"173.0",	"Lantanidos",	"2",	"3"},				
+         {"Lutecio",	"Lu",	"175.0",	"Metal de Transicion",	"3"},					
+         {"Hafnio",	"Hf",   "178.5",	"Metal de Transicion",	"4"},					
+         {"Tantalo",	"Ta",	"180.9",	"Metal de Transicion",	"5"},					
+         {"Wolframio",	"W",	"183.8",	"Metal de Transicion",	"4",	"6"},				
+         {"Renio",	"Re",	"186.2",	"Metal de Transicion",	"4",	"6",	"7"},			
+         {"Osmio",	"Os",	"190.2",	"Metal de Transicion",	"2",	"3",	"4",	"6",	"8"},	
+         {"Iridio",	"Ir",	"192.2",	"Metal de Transicion",	"3",	"4"},				
+         {"Platino",	"Pt",	"195.1",	"Metal de Transicion",	"2",	"4"},				
+         {"Oro",	"Au",	"197.0",	"Metal de Transicion",	"1",	"3"},				
+         {"Mercurio",	"Hg",	"200.6",	"Metal de Transicion",	"1",	"2"},				
+         {"Talio",	"Ti",	"204.4",	"Otros metales",	"1",	"3"},				
+         {"Plomo",	"Pb",	"207.2",	"Otros metales",	"2",	"4"},				
+         {"Bismuto",	"Bi",	"209.0",	"Otros metales",	"-3",	"3",	"5"},			
+         {"Polonio",	"Po",	"210",	"Metaloides",	"-2",	"2",	"4"},			
+         {"Astato",	"At",	"210",	"Halogeno",	"-1"	"1",	"3",	"5",	"7"},	
+         {"Radon",	"Rn",	"220",	"Gas noble",	"0"},					
+         {"Francio",	"Fr",	"223",	"Metal Alcalinos",	"1"},					
+         {"Radio",	"Ra",	"226",	"Alcalinoterreos",	"2"},					
+         {"Actinio",	"Ac",	"227",	"Actinidos",	"3"},					
+         {"Torio",	"Th",	"232.0",	"Actinidos",	"4"},					
+         {"Protactinio",	"Pa",	",231.0",	"Actinidos",	"5"},					
+         {"Uranio",	"U",	"238.0",	"Actinidos",	"6"},					
+         {"Neptunio",	"Np",	"237",	"Actinidos",	"5"},					
+         {"Plutonio",	"Pu",	"244",	"Actinidos",	"4"},					
+         {"Americio",	"Am",	"243",	"Actinidos",	"3"},					
+         {"Curio",	"Cm",	"247",	"Actinidos",	"3"},					
+         {"Berkelio",	"Bk",	"247",	"Actinidos",	"3"},					
+         {"Californio",	"Cf",	"251",	"Actinidos",	"3"},					
+         {"Einstenio",	"Es",	"252",	"Actinidos",	"3"},					
+         {"Fermio",	"Fm",	"257",	"Actinidos",	"3"},					
+         {"Mendelevio",	"Md",	"258",	"Actinidos",	"3"},					
+         {"Nobelio",	"No",	"259",	"Actinidos",	"2"},					
+         {"Lawrencio",	"Lr",	"1,008",	"Metal de Transicion",	"3"}					
+         {"Rutherfordio",	"Rf",	"267",	"Metal de Transicion",	"4"}					
+         {"Dubnio",	"Db",	"268",	"Metal de Transicion",	"5"},					
+         {"Seaborgio",	"Sg",	"271",	"Metal de Transicion",	"6"},					
+         {"Bohrio",	"Bh",	"272",	"Metal de Transicion",	"7"},					
+         {"Hasio",	"Hs",	"277",	"Metal de Transicion",	"8"},					
+         {"Meitnerio",	"Mt",	"276",	"Metal de Transicion",	"0"},					
+         {"Darmstatio",	"Ds",	"281",	"Metal de Transicion",	"0"},					
+         {"Roentgenio",	"Rg",	"280",	"Metal de Transicion",	"0"},					
+         {"Copernicio",	"Cn",	"285",	"Metal de Transicion",	"0"},					
+         {"Nihonio",	"Nh",	"284",	"Otros metales",	"0"},					
+         {"Flerovio",	"Fl",	"289",	"Otros metales",	"0"},					
+         {"Moscovio",	"Mc",	"288",	"Otros metales",	"0"},					
+         {"Livermorio",	"Lv",	"293",	"Otros metales",	"0"},					
+         {"Teneso",	"Ts",	"294",	"Halogeno",	"0"},					
+         {"Oganesón",	"Og",	"294",	"Gas noble",	"0"}
+         
+         
+         
+         
+         
+    
+    
+    
+    
+}
+
+}
+
+}
